@@ -70,7 +70,7 @@ MRP.MultilineChoices = MRP.MultilineChoices || {};
 		var index = 0;
         var y = this.itemHeight() * this.linesNeeded(0);
 		while(this._scrollY >= y) {
-			var lines = this.linesNeeded(index);
+			var lines = this.linesNeeded(index + 1);
 			if(lines > 0) {
 				y += this.itemHeight() * lines;
 				index++;
