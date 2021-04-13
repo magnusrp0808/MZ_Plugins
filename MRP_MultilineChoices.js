@@ -2,7 +2,7 @@
 // Multiline Choices
 // MRP_MultilineChoices.js
 // By Magnus0808 || Magnus Rubin Peterson
-// Version 1.0
+// Version 1.1
 //=============================================================================
 
 /*:
@@ -12,6 +12,11 @@
  *
  * @help Insert \n to add a line break in a choice. E.g.
  *      This is line 1 of choice 1\n This is line 2 of choice 1
+ * 
+ *      Change log:
+ *      1.1 - Fixed issue with not being able to see part of the top choice when
+ *            scrolling down.
+ *      1.0 - Initial release
  */
 
 var Imported = Imported || {};
