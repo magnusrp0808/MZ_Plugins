@@ -2,7 +2,7 @@
 // Multiline Choices
 // MRP_MultilineChoices.js
 // By Magnus0808 || Magnus Rubin Peterson
-// Version 1.1
+// Version 1.2
 //=============================================================================
 
 /*:
@@ -14,6 +14,7 @@
  *      This is line 1 of choice 1\n This is line 2 of choice 1
  * 
  *      Change log:
+ *      1.2 - Fixed escape characters not working
  *      1.1 - Fixed issue with not being able to see part of the top choice when
  *            scrolling down.
  *      1.0 - Initial release
@@ -29,7 +30,7 @@ MRP.MultilineChoices = MRP.MultilineChoices || {};
     
     MRP.MultilineChoices.Window_ChoiceList_processEscapeCharacter = Window_ChoiceList.prototype.processEscapeCharacter;
     Window_ChoiceList.prototype.processEscapeCharacter = function(code, textState) {
-        MRP.MultilineChoices.Window_ChoiceList_processEscapeCharacter.call(this);
+        MRP.MultilineChoices.Window_ChoiceList_processEscapeCharacter.call(this, code, textState);
         switch (code) {
             case 'N':
                 this.processNewLine(textState);
